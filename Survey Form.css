@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+:root {
+    --dark-blue-color: rgb(27 27 50 / 80%);
+    --white-color: #f3f3f3;
+    --color-green: #37af65;
+}
+/* TODO: MAKE IT RESPONSIVE */
+body {
+    background-color: rgb(185, 181, 181);
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.4rem;
+    font-weight: 400;
+    color: #f3f3f3;
+    background-image: linear-gradient(
+        115deg,
+        rgba(58, 58, 158, 0.8),
+        rgba(136, 136, 206, 0.7)
+        ),
+        url(survey-form-background.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#form-container {
+    display: block;
+    width: 100%;
+    margin: 3rem auto 0 auto;
+    color: var(--white-color);
+}
+
+#title{
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#description {
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.8);
+    font-style: italic;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 40%);
+}
+
+header {
+    text-align: center;
+    margin: 5px auto 50px auto;
+    font-size: 1.12rem;
+}
+
+#survey-form {
+    width: 550px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--dark-blue-color);
+    border-radius: 0.5rem;
+
+}
+
+@media (min-width: 768px) {
+    #survey-form {
+        width: 720px;
+    }
+}
+
+.form-group {
+    margin: 0 auto 1.25rem auto;
+    padding: 0.25rem;
+
+}
+
+p {
+    margin: 0.5rem;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+
+}
+
+input[type=text], input[type=email], input[type=number], select, textarea {
+    display: block;
+    width: 100%;
+    height: 2.25rem;
+    border-radius: 0.25rem;
+    padding: 0.3rem 0.75rem;
+    border: 0;
+    outline: none;
+    /* white-space: nowrap; */
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    height: 7rem;
+    overflow: auto;
+}
+
+#name::placeholder, #email::placeholder, #number::placeholder, textarea::placeholder, select{
+    color: rgb(143, 143, 143);
+    background-color: #fff;
+    font-size: 1rem;
+    font-family: 'Poppins';
+
+}
+
+option {
+    color: rgb(100, 100, 100);
+}
+
+.form-group p {
+    font-size: 1.2rem;
+}
+
+input[type=radio], input[type=checkbox] {
+    margin-right: 8px;
+    
+}
+
+.recommend-to-friend {
+    font-size: 1.125rem;
+    color: var(--white-color);
+
+}
+
+input[type=radio], input[name=prefer] {
+    min-width: 1.25rem;
+    min-height: 1.25rem;
+}
+
+textarea {
+    font-size: 1rem;
+    letter-spacing: normal;
+    word-spacing: normal;
+}
+
+button {
+    width: 100%;
+    height: 3rem;
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: var(--white-color);
+    background-color: var(--color-green);
+    border: 0;
+    border-radius: 0.25rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 2rem;
+    cursor: pointer;    
+}
+
+button:hover {
+    animation-name: change;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change {
+    0% {
+        color: white;
+    }
+
+    100% {
+        color: black;
+    }
+}
+
+.clue {
+    margin-left: 2px;
+    font-size: 0.9rem;
+    color: rgb(240, 240, 240);
+}
