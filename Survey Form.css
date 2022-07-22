@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
 
 :root {
-    --dark-blue-color: rgb(27 27 50 / 80%);
+    --dark-red-color: rgba(92, 16, 16, 0.8);
     --white-color: #f3f3f3;
-    --color-green: #37af65;
+    --color-black-red: #220808;
 }
-/* TODO: MAKE IT RESPONSIVE */
+
 body {
     background-color: rgb(185, 181, 181);
     margin: 0;
@@ -15,11 +15,11 @@ body {
     font-weight: 400;
     color: #f3f3f3;
     background-image: linear-gradient(
-        115deg,
-        rgba(58, 58, 158, 0.8),
-        rgba(136, 136, 206, 0.7)
+        0deg,
+        rgba(143, 143, 143, 0.7),
+        rgba(70, 69, 69, 0.7)
         ),
-        url(survey-form-background.jpeg);
+        url(./images/jason-goodman-vbxyFxlgpjM-unsplash.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -60,9 +60,8 @@ header {
     min-height: 100vh;
     margin: 0 auto;
     padding: 2rem;
-    background-color: var(--dark-blue-color);
+    background-color: var(--dark-red-color);
     border-radius: 0.5rem;
-
 }
 
 @media (min-width: 768px) {
@@ -74,7 +73,17 @@ header {
 .form-group {
     margin: 0 auto 1.25rem auto;
     padding: 0.25rem;
+}
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+}
+
+.current-languages {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
 }
 
 p {
@@ -86,7 +95,6 @@ label {
     align-items: center;
     font-size: 1.125rem;
     margin-bottom: 0.5rem;
-
 }
 
 input[type=text], input[type=email], input[type=number], select, textarea {
@@ -97,7 +105,6 @@ input[type=text], input[type=email], input[type=number], select, textarea {
     padding: 0.3rem 0.75rem;
     border: 0;
     outline: none;
-    /* white-space: nowrap; */
 }
 
 textarea {
@@ -112,7 +119,6 @@ textarea {
     background-color: #fff;
     font-size: 1rem;
     font-family: 'Poppins';
-
 }
 
 option {
@@ -125,16 +131,14 @@ option {
 
 input[type=radio], input[type=checkbox] {
     margin-right: 8px;
-    
 }
 
-.recommend-to-friend {
+.open-source-projects {
     font-size: 1.125rem;
     color: var(--white-color);
-
 }
 
-input[type=radio], input[name=prefer] {
+input[type=radio], input[name="programming languages"] {
     min-width: 1.25rem;
     min-height: 1.25rem;
 }
@@ -153,7 +157,7 @@ button {
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     color: var(--white-color);
-    background-color: var(--color-green);
+    background-color: var(--color-black-red);
     border: 0;
     border-radius: 0.25rem;
     letter-spacing: 0.1rem;
@@ -169,11 +173,11 @@ button:hover {
 
 @keyframes change {
     0% {
-        color: white;
+        background-color: var(--color-black-red);
     }
 
     100% {
-        color: black;
+        background-color: black;
     }
 }
 

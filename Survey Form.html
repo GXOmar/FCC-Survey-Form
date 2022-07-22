@@ -3,110 +3,131 @@
     <head>
         <title>FreeCodeCamp Survey Form</title>
         <link rel="stylesheet" href="Survey Form.css">
+        <link rel="icon shortcut" href="./icons/check-list.png">    
     </head>
     <body>
         <div id="form-container">
             <header>
-                <h1 id="title">FreeCodeCamp Survey Form</h1>
-                <p id="description">Thank you for taking the time to help is improve the platform</p>
+                <h1 id="title">2022 Developer Survey Form</h1>
+                <p id="description">Thank you for being involved in the developers' community</p>
             </header>
             <form id="survey-form">
                 <div class="form-group">
-                    <label for="name" id="name-label">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    <label for="name" id="name-label">Name<span class="clue">(optional)</span></label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
                 </div>
 
                 <div class="form-group">
-                    <label for="email" id="email-label">Email</label>   
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <label for="email" id="email-label">Email<span class="clue">(optional)</span></label>   
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
                 </div>
 
                 <div class="form-group">
-                    <label for="number" id="number-label">Age<span class="clue">(optional)</span></label>
-                    <input type="number" id="number" name="number" placeholder="Enter your Age" min="10" max="99">
+                    <label for="number" id="number-label">Age</label>
+                    <input type="number" id="number" name="number" placeholder="Enter your Age" min="6" max="99" required>
                 </div>
-
+                
                 <div class="form-group">
-                    <label for="dropdown">Which option best describes your current role?</label>
+                    <label for="dropdown">What is your current developer role?</label>
                     <select id="dropdown" name="current-role" required>
                         <option id="opt" disabled selected value>Select current role</option>
-                        <option value="Student">Student</option>
-                        <option value="Full time job">Full time job</option>
-                        <option value="Full time learner">Full time learner</option>
-                        <option value="Prefer not to say">Prefer not to say</option>
-                        <option value="Other">Other</option>
-                    </select>   
-                </div>  
+                        <option value="Full-stack">Full-stack developer</option>
+                        <option value="Back-end">Back-end developer</option>
+                        <option value="Front-end">Front-end developer</option>
+                        <option value="Mobile">Mobile developer</option>
+                        <option value="DevOps">DevOps specialist</option>
+                        <option value="I am still Studying">I am still Studying</option>
+                        <option value="Other">Other roles</option>
+                    </select>
+                </div>
                 <div class="form-group">
-                    <p>Would you recommend FreeCodeCamp to a friend?</p>
-                    <label class="recommend-to-friend">
-                        <input name="recommend to friend" type="radio" value="Definitely" checked> Definitely
+                    <p>Have you ever participated or helped build an open source project?</p>
+                    <label class="open-source-projects">
+                        <input name="open source projects" type="radio" value="No, I haven't" required>No, I haven't
                     </label>
-                    <label class="recommend-to-friend">
-                        <input name="recommend to friend" type="radio" value="Maybe"> Maybe
+                    <label class="open-source-projects">
+                        <input name="open source projects" type="radio" value="contributed to an open source project" required>Yes, I did it once.
                     </label>
-                    <label class="recommend-to-friend">
-                        <input name="recommend to friend" type="radio" value="Not sure"> Not sure
+                    <label class="open-source-projects">
+                        <input name="open source projects" type="radio" value="Yes, couple of times." required>Yes, couple of times.
                     </label>
                 </div>
 
                 <div class="form-group">
-                    <p>What is your favorite feature of FreeCodeCamp?</p>
+                    <p>What is your favorite thing for being a developer?</p>
                     <select>
                         <option disabled selected value>Select an option</option>
-                        <option>Challenges</option>
-                        <option>Projects</option>
-                        <option>Community</option>
-                        <option>Open Source</option>
+                        <option>The beautiful Community</option>
+                        <option>The Challenges</option>
+                        <option>The freedom to work anywhere</option>
+                        <option>The high salaries</option>
                     </select>
                 </div>
 
-                <div class="form-group">
-                    <p>What would you like to see improved? <span class="clue">(check all that apply)</span></p>                
+                <p class="current-languages">What programming languages you currently know/learning? <span class="clue">(check all that apply)</span></p>                
+                <div class="form-group grid-container">
                     <label>
-                        <input type="checkbox" name="prefer" value="Front-end Projects"> Front-end Projects
+                        <input type="checkbox" name="programming languages" value="Python"> Python
                     </label>
                     <label>
-                        <input type="checkbox" name="prefer" value="Back-end Projects"> Back-end Projects
+                        <input type="checkbox" name="programming languages" value="JavaScript"> JavaScript
                     </label>
                     <label>
-                        <input type="checkbox" name="prefer" value="Data Visualization"> Data Visualization
+                        <input type="checkbox" name="programming languages" value="Java"> Java
                     </label>
                     <label>
-                        <input type="checkbox" name="prefer" value="Challenges"> Challenges
+                        <input type="checkbox" name="programming languages" value="HTML/CSS"> HTML/CSS
                     </label>
                     <label>
-                        <input type="checkbox" name="prefer" value="Open Source Community"> Open Source Community
+                        <input type="checkbox" name="programming languages" value="PHP"> PHP
                     </label>
                     <label>
-                        <input type="checkbox" name="prefer" value="Gitter help rooms"> Gitter help rooms
+                        <input type="checkbox" name="programming languages" value="SQL"> SQL
                     </label>
                     <label>
-                        <input type="checkbox" name="prefer" value="Videos"> videos
+                        <input type="checkbox" name="programming languages" value="TypeScript"> TypeScript
                     </label>
                     <label>
-                        <input type="checkbox" name="prefer" value="City Meetups">  City Meetups
+                        <input type="checkbox" name="programming languages" value="C">  C
                     </label>
                     <label>
-                        <input type="checkbox" name="prefer" value="Wiki">  Wiki
+                        <input type="checkbox" name="programming languages" value="C#"> C# 
                     </label>
                     <label>
-                        <input type="checkbox" name="prefer" value="forum"> Forum
+                        <input type="checkbox" name="programming languages" value="C++">  C++
                     </label>
                     <label>
-                        <input type="checkbox" name="prefer" value="Additional Courses"> Additional Courses
+                        <input type="checkbox" name="programming languages" value="Rust"> Rust
+                    </label>
+                    <label>
+                        <input type="checkbox" name="programming languages" value="Assembly"> Assembly
+                    </label>
+                    <label>
+                        <input type="checkbox" name="programming languages" value="Swift"> Swift
+                    </label>
+                    <label>
+                        <input type="checkbox" name="programming languages" value="R"> R
+                    </label>
+                    <label>
+                        <input type="checkbox" name="programming languages" value="Go"> Go
+                    </label>
+                    <label>
+                        <input type="checkbox" name="programming languages" value="Ruby"> Ruby
+                    </label>
+                    <label>
+                        <input type="checkbox" name="programming languages" value="Kotlin"> Kotlin
+                    </label>
+                    <label>
+                        <input type="checkbox" name="programming languages" value="Dart"> Dart
                     </label>
                 </div>
 
                 <div class="form-group">
-                    <p>Any comments or suggestions?</p>
+                    <p>Any ideas to make the world of development better?</p>
                     <textarea placeholder="Enter your comment here..."></textarea>
                 </div>
-                <button id="submit" type="submit" >submit</button>
+                <button id="submit" type="submit">submit</button>
             </form>
         </div>
     </body>
 </html>
-
-
-
